@@ -15,8 +15,6 @@ jobs:
           echo "Hello World!"
 
       - name: Today it is
-        run : |
-          echo date
+        run : date
       - name: Filelist
-        run: |
-          echo ls -l
+        run:  ls -l
