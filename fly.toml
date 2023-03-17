@@ -22,7 +22,6 @@ processes = []
   internal_port = 8080
   processes = ["app"]
   protocol = "tcp"
-#  script_checks = []
   [services.concurrency]
     hard_limit = 25
     soft_limit = 20
@@ -44,9 +43,8 @@ processes = []
     timeout = "2s"
 
   [[services.script_checks]]
-    command       = "./app/health_check.sh"
-    args          = []
+    command       = "app/health_check.sh"
     grace_period  = "1s"
-    interval      = "5s"
+    interval      = "1s"
     restart_limit = 0
     timeout       = "1s"
