@@ -64,6 +64,7 @@ jobs:
   notify:
      needs: [flyio_deploy]
      runs-on: ubuntu-20.04
+     steps:
       - name: Test Success
         uses: rjstone/discord-webhook-notify@v1
         if: success()
