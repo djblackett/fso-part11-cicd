@@ -1,14 +1,16 @@
 #!/bin/bash
 
-echo "Hello from shell script"
 apt update
 apt install curl
 status=$(curl https://billowing-wildflower-8404.fly.dev/health)
 
 if [[ $status == "ok" ]]; then
-  echo "all good"
+  echo "OK"
   exit 0
 else
-  echo "error"
+  echo "Error"
   exit 1
 fi
+
+
+exit 0

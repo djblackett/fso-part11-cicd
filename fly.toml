@@ -42,12 +42,12 @@ processes = []
     restart_limit = 0
     timeout = "2s"
 
-  [[services.script_checks]]
-    command       = "app/health_check.sh"
-    grace_period  = "1s"
-    interval      = "1s"
-    restart_limit = 0
-    timeout       = "1s"
+#  [[services.script_checks]]
+#    command       = "app/health_check.sh"
+#    grace_period  = "1s"
+#    interval      = "1s"
+#    restart_limit = 0
+#    timeout       = "1s"
 
   [[services.http_checks]]
     interval = 10000
