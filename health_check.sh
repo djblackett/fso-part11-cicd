@@ -2,4 +2,12 @@
 
 echo "Hello from shell script"
 
-exit 0 # exit status 1 means that the script "fails"
+status=$(curl https://billowing-wildflower-8404.fly.dev/health)
+
+if [[ $status == "ok" ]]; then
+  echo "all good"
+  exit 0
+else
+  echo "error"
+  exit 1
+fi
