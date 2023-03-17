@@ -1,8 +1,6 @@
 #!/bin/bash
 
-#apt update
-#apt install curl
-status=$(curl https://billowing-wildflower-8404.fly.dev/health)
+status=$(curl -s https://billowing-wildflower-8404.fly.dev/health)
 
 if [[ $status == "ok" ]]; then
   echo "OK"
